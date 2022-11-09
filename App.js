@@ -10,6 +10,7 @@ import {Ionicons} from "@expo/vector-icons";
 // import {byYear, byDays} from "./charts/BarChart";
 // import {getObjectif} from "./charts/ProgressChart";
 import {getProgress} from "./charts/ProgressChart";
+import {getbar} from "./charts/BarChart";
 
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
@@ -43,6 +44,12 @@ const screenWidth = Dimensions.get('window').width;
                         <View style={homeStyle.item}>
                             <Text style={homeStyle.headItem} title='Détails conso'>Cette année</Text>
                             {getProgress()}
+                        </View>
+                    </LinearGradient>
+                    <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
+                        <View style={homeStyle.item}>
+                            <Text style={homeStyle.headItem} title='Détails conso'>Ma conso en détail</Text>
+                            {getbar()}
                         </View>
                     </LinearGradient>
                 </View>
@@ -110,6 +117,7 @@ const homeStyle = StyleSheet.create({
         color: '#FFFFFF',
         fontSize: 20,
         marginBottom: 20,
+        alignSelf: 'center',
     },
     divider: {
         borderLeftColor: '#FFFFFF',
