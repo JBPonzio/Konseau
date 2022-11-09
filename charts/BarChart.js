@@ -1,105 +1,54 @@
-//
-// import { BarChart} from "react-native-chart-kit";
-// import * as React from 'react';
-// import {Dimensions} from "react-native";
-//
-// const screenWidth = Dimensions.get('window').width;
-// const dataYear =  {
-//     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
-//     datasets: [
-//         {
-//             data: [20, 45, 28, 80, 99, 43, 12, 5, 6, 30, 45, 36],
-//         },
-//     ],
-// };
-//
-// const date = new Date();
-// const dataByDays =  {
-//     labels: getDays(date.getMonth(), date.getFullYear()),
-//     datasets: [
-//         {
-//             data: [20, 45, 28, 80, 99, 43, 12, 5, 6, 30, 45, 36],
-//             strokeWidth: 1, // optional
-//         },
-//     ],
-// };
-//
-// function byYear() {
-//     console.log(screenWidth);
-//
-//     return (
-//         <BarChart
-//             data={dataYear}
-//             width={screenWidth} // from react-native
-//             height={220}
-//             yAxisLabel={'$'}
-//             fromZero={true}
-//             verticalLabelRotation={50}
-//             withInnerLines={false}
-//             showValuesOnTopOfBars={true}
-//             chartConfig={{
-//                 decimalPlaces: 0, // optional, defaults to 2dp
-//                 color: (opacity = 0) => `#FFFFFF`,
-//                 backgroundGradientTo: '#09374c',
-//                 backgroundGradientFrom: "#0b0f1e",
-//                 style: {
-//                     borderRadius: 16,
-//                     marginRight:0
-//                 },
-//             }}
-//             style={{
-//                 borderRadius: 16,
-//                 marginRight:0
-//             }}
-//         />
-//     )
-// }
-//
-// function byDays() {
-//     return (
-//         <LineChart
-//             data={dataByDays}
-//             width={300} // from react-native
-//             height={220}
-//             yAxisLabel={'$'}
-//             paddingTop={5}
-//             chartConfig={{
-//                 backgroundColor: '#e26a00',
-//                 backgroundGradientFrom: '#fb8c00',
-//                 backgroundGradientTo: 'rgba(0,0,0,0.5)',
-//                 decimalPlaces: 1, // optional, defaults to 2dp
-//                 color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-//                 style: {
-//                     borderRadius: 16
-//                 }
-//             }}
-//             bezier
-//             style={{
-//                 marginVertical: 1,
-//                 borderRadius: 10
-//             }}
-//         />
-//     )
-// }
-//
-// function byWeeks() {
-//
-// }
-//
-// function getDays(month, year) {
-//     let date = new Date(year, month, 1);
-//     let days = [];
-//     while (date.getMonth() === month) {
-//         days.push((new Date(date)).getDay().toLocaleString());
-//         date.setDate(date.getDate() + 1);
-//     }
-//
-//     return days;
-// }
-//
-//
-// export {
-//     byYear,
-//     byDays,
-//     byWeeks
-// }
+import {VictoryBar, VictoryLabel, VictoryChart, VictoryAxis, VictoryTheme} from "victory-native";
+
+function getbar() {
+    return (
+        <VictoryChart>
+            <VictoryBar
+                style={{
+                    labels: {
+                        fill: "white",
+                        fontSize: 11,
+                    },
+                    data: {
+                        fill: "#20A7E2",
+                    }
+                }}
+                labels={({ datum }) => datum.y + '€'}
+                alignment="middle"
+                animate={{
+                    duration: 1000,
+                    onLoad: { duration: 1000 }
+                }}
+                barRatio={1}
+                data={[
+                    { x: "Janvier", y: 18 },
+                    { x: "Février", y: 20 },
+                    { x: "Mars", y: 5 },
+                    { x: "Avril", y: 20 },
+                    { x: "Mai", y: 10},
+                    { x: "Juin", y: 20 },
+                    { x: "Juillet", y: 14 },
+                    { x: "Août", y: 4 },
+                    { x: "Septembre", y: 32 },
+                    { x: "Octobre", y: 16 },
+                    { x: "Novembre", y: 20 },
+                    { x: "Décembre", y: 10 }
+                ]}
+            />
+            <VictoryAxis
+                //x
+                tickValues={[1, 2, 3, 4, 5, 6, 7 ,8 ,9, 10, 11, 12]}
+                tickLabelComponent={<VictoryLabel angle={45} />}
+                style={{
+                    axis: {stroke: 'transparent'},
+                    ticks: {stroke: 'transparent'},
+                    tickLabels: {fontSize: 9, padding: 10, marginLeft:0, stroke:"white", verticalAnchor: "right", textAnchor:'start'},
+                }}
+            />
+        </VictoryChart>
+    )
+}
+
+export {
+    getbar
+}
