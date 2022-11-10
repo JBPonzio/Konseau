@@ -27,7 +27,6 @@ export default function ({navigation}) {
     )
 }
 
-
 const homeStyle = StyleSheet.create({
     base: {
         backgroundColor: '#101010',
