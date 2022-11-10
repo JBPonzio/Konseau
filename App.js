@@ -6,6 +6,7 @@ import { createNativeStackNavigator} from "@react-navigation/native-stack";
 import HomeScreen from './screens/HomeScreen';
 import DetailScreen from "./screens/DetailScreen";
 import DivisionScreen from "./screens/DivisionScreen";
+import ProfilScreen from "./screens/ProfilScreen";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import { MaterialIcons, MaterialCommunityIcons, FontAwesome, AntDesign } from '@expo/vector-icons';
 
@@ -48,7 +49,7 @@ export default function App() {
                         <AntDesign name="barschart" size={24} color='#FFFFFF' />
                     ),
                 }}/>
-                <Tab.Screen name="Profil" component={DetailScreen} options={{
+                <Tab.Screen name="Profil" component={ProfilScreen} options={{
                     tabBarActiveBackgroundColor: '#08374b',
                     tabBarActiveTintColor: '#FFFFFF',
                     headerShown:false,

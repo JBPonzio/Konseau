@@ -1,27 +1,25 @@
 import {Dimensions, Image, ScrollView, StatusBar, StyleSheet, Text, View} from "react-native";
 import {LinearGradient} from "expo-linear-gradient";
-import getPie from "../charts/PieChart";
 
 const screenHeight = Dimensions.get('window').height;
 
+
 export default function() {
+
     return (
         <View style={{flex: 1}}>
-            <ScrollView style={{flex:1}}>
-                <StatusBar style="light" backgroundColor={'#101010'}/>
-                <View style={homeStyle.base}>
-                    <View style={homeStyle.header}>
-                        <Text style={homeStyle.textHead}>KONSEAU</Text>
-                        <Image style={homeStyle.imageHeader} source={require('../assets/image.png')}/>
-                    </View>
-                    <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
-                        <View style={homeStyle.item}>
-                            <Text style={homeStyle.headItem} title='Détails conso'>Répartition de ma consommation</Text>
-                            {getPie()}
-                        </View>
-                    </LinearGradient>
+            <StatusBar style="light" backgroundColor={'#101010'}/>
+            <View style={homeStyle.base}>
+                <View style={homeStyle.header}>
+                    <Text style={homeStyle.textHead}>KONSEAU</Text>
+                    <Image style={homeStyle.imageHeader} source={require('../assets/image.png')}/>
                 </View>
-            </ScrollView>
+                <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
+                    <View style={homeStyle.item}>
+                        <Text style={homeStyle.headItem} title='Détails conso'>Mon foyer</Text>
+                    </View>
+                </LinearGradient>
+            </View>
         </View>
     )
 }
