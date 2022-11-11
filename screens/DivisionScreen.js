@@ -1,16 +1,10 @@
-import {Image, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {Dimensions, Image, ScrollView, StatusBar, StyleSheet, Text, View} from "react-native";
 import {LinearGradient} from "expo-linear-gradient";
-import {getProgress} from "../charts/ProgressChart";
-import {getbar} from "../charts/BarChart";
-import * as React from "react-native";
-import {Dimensions} from "react-native";
+import getPie from "../charts/PieChart";
 
 const screenHeight = Dimensions.get('window').height;
 
-export default function ({ navigation }) {
-
-    const goTo = () => navigation.navigate("detail");
-
+export default function() {
     return (
         <View style={{flex: 1}}>
             <ScrollView style={{flex:1}}>
@@ -22,32 +16,10 @@ export default function ({ navigation }) {
                     </View>
                     <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
                         <View style={homeStyle.item}>
-                            <Text style={homeStyle.headItem} title='Détails conso'>Aujourd'hui</Text>
-                            {getProgress()}
-                        </View>
-                        <View style={homeStyle.item}>
-                            <Text style={homeStyle.headItem} title='Détails conso'>Ce mois-ci</Text>
-                            {getProgress()}
+                            <Text style={homeStyle.headItem} title='Détails conso'>Répartition de ma consommation</Text>
+                            {getPie()}
                         </View>
                     </LinearGradient>
-                    <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
-                        <View style={homeStyle.item}>
-                            <Text style={homeStyle.headItem} title='Détails conso'>Cette semaine</Text>
-                            {getProgress()}
-                        </View>
-                        <View style={homeStyle.item}>
-                            <Text style={homeStyle.headItem} title='Détails conso'>Cette année</Text>
-                            {getProgress()}
-                        </View>
-                    </LinearGradient>
-                    <TouchableOpacity onPress={() => {goTo()}}>
-                        <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
-                            <View style={homeStyle.item}>
-                                <Text style={homeStyle.headItem} title='Détails conso'>Ma conso en détail</Text>
-                                {getbar()}
-                            </View>
-                        </LinearGradient>
-                    </TouchableOpacity>
                 </View>
             </ScrollView>
         </View>
