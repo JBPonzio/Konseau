@@ -1,18 +1,34 @@
-import {VictoryPie} from "victory-native";
+import { VictoryChart, VictoryBar, VictoryTheme, VictoryPie } from "victory-native";
 
 export default function getPie() {
 
-    return (
-        <VictoryPie
-            padAngle={({ datum }) => datum.y}
-            innerRadius={100}
-            data={[
-                { x: "Cats", y: 35 },
-                { x: "Dogs", y: 40 },
-                { x: "Birds", y: 55 }
-            ]}>
+    const data =
+        [
+            {
+                day: "Lundi",
+                consommation_day: 40,
+            },
+            {
+                day: "Mardi",
+                consommation_day: 20,
+            },
+            {
+                day: "Mercredi",
+                consommation_day: 60,
+            },
+            {
+                day: "Jeudi",
+                consommation_day: 90,
+            },
+            {
+                day: "Vendredi",
+                consommation_day: 40,
+            },
+        ]
 
-        </VictoryPie>
+    return (
+        <VictoryPie data={data} x={data.day} y={data.consommation_day}
+            labels={data.day}
+            theme={VictoryTheme.material} ></VictoryPie>
     )
 }
-

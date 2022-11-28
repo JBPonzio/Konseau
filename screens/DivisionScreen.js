@@ -1,20 +1,20 @@
-import {Dimensions, Image, ScrollView, StatusBar, StyleSheet, Text, View} from "react-native";
-import {LinearGradient} from "expo-linear-gradient";
+import { Dimensions, Image, ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import getPie from "../charts/PieChart";
 
 const screenHeight = Dimensions.get('window').height;
 
-export default function() {
+export default function () {
     return (
-        <View style={{flex: 1}}>
-            <ScrollView style={{flex:1}}>
-                <StatusBar style="light" backgroundColor={'#101010'}/>
+        <View style={{ flex: 1 }}>
+            <ScrollView style={{ flex: 1 }}>
+                <StatusBar style="light" backgroundColor={'#101010'} />
                 <View style={homeStyle.base}>
                     <View style={homeStyle.header}>
                         <Text style={homeStyle.textHead}>KONSEAU</Text>
-                        <Image style={homeStyle.imageHeader} source={require('../assets/image.png')}/>
+                        <Image style={homeStyle.imageHeader} source={require('../assets/image.png')} />
                     </View>
-                    <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
+                    <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x: 0.5, y: 0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
                         <View style={homeStyle.item}>
                             <Text style={homeStyle.headItem} title='Détails conso'>Répartition de ma consommation</Text>
                             {getPie()}
@@ -59,7 +59,7 @@ const homeStyle = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         padding: 10,
-        margin:5,
+        margin: 5,
         marginBottom: 10,
     },
     lineItem: {
@@ -77,7 +77,7 @@ const homeStyle = StyleSheet.create({
         borderLeftColor: '#FFFFFF',
         borderLeftStyle: 'solid',
         borderLeftWidth: 2,
-        height:100,
+        height: 100,
     },
     items: {
         flexDirection: 'row',
