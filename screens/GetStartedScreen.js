@@ -9,12 +9,13 @@ const screenHeight = Dimensions.get('window').height;
 
 export default function ({ navigation }) {
 
-    const goTo = () => navigation.navigate("Tableau de bord");
+    const goToHome = () => navigation.navigate("Tableau de bord");
+    const goToForm = () => navigation.navigate("form");
     let firstConnection = true;
 
     // si il ne s'agit pas de la première connexion renvoie sur la page du tableau de bord
     if (!firstConnection) {
-        return goTo();
+        return goToHome();
     }
     return (
         <View style={{ flex: 1 }}>
@@ -30,7 +31,7 @@ export default function ({ navigation }) {
                 </View>
 
                 <View style={{ flex: 1 }}>
-                    <TouchableOpacity onPress={() => { goTo() }}>
+                    <TouchableOpacity onPress={() => { goToForm() }}>
                         <LinearGradient colors={['#82C9E8', '#20A7E2']} start={{ x: 0, y: 0 }} end={{ x: 0, y: 0 }} style={homeStyle.body}>
                             <Text style={homeStyle.headItemBold} title='GetStarted'>GET STARTED</Text>
                         </LinearGradient>
