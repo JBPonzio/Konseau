@@ -12,6 +12,7 @@ export default function ({ navigation }) {
     const goTo = () => navigation.navigate("Tableau de bord");
     let firstConnection = true;
 
+    // si il ne s'agit pas de la première connexion renvoie sur la page du tableau de bord
     if (!firstConnection) {
         return goTo();
     }
