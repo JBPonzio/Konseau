@@ -1395,6 +1395,17 @@
   "resolved" "https://registry.npmjs.org/@expo/vector-icons/-/vector-icons-13.0.0.tgz"
   "version" "13.0.0"
 
+"@expo/websql@^1.0.1":
+  "integrity" "sha512-H9/t1V7XXyKC343FJz/LwaVBfDhs6IqhDtSYWpt8LNSQDVjf5NvVJLc5wp+KCpRidZx8+0+YeHJN45HOXmqjFA=="
+  "resolved" "https://registry.npmjs.org/@expo/websql/-/websql-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "argsarray" "^0.0.1"
+    "immediate" "^3.2.2"
+    "noop-fn" "^1.0.0"
+    "pouchdb-collections" "^1.0.1"
+    "tiny-queue" "^0.2.1"
+
 "@expo/xcpretty@^4.2.1":
   "integrity" "sha512-Lke/geldJqUV0Dfxg5/QIOugOzdqZ/rQ9yHKSgGbjZtG1uiSqWyFwWvXmrdd3/sIdX33eykGvIcf+OrvvcXVUw=="
   "resolved" "https://registry.npmjs.org/@expo/xcpretty/-/xcpretty-4.2.2.tgz"
@@ -2140,6 +2151,11 @@
   "integrity" "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="
   "resolved" "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz"
   "version" "2.0.1"
+
+"argsarray@^0.0.1":
+  "integrity" "sha512-u96dg2GcAKtpTrBdDoFIM7PjcBA+6rSP0OR94MOReNRyUECL6MtQt5XXmRr4qrftYaef9+l5hcpO5te7sML1Cg=="
+  "resolved" "https://registry.npmjs.org/argsarray/-/argsarray-0.0.1.tgz"
+  "version" "0.0.1"
 
 "arr-diff@^4.0.0":
   "integrity" "sha512-YVIQ82gZPGBebQV/a8dar4AitzCQs0jjXwMPZllpXMaGjXPYVUawSxQrRsjhjupyVxEvbHgUmIhKVlND+j02kA=="
@@ -3351,7 +3367,7 @@
   "resolved" "https://registry.npmjs.org/expo-application/-/expo-application-4.2.2.tgz"
   "version" "4.2.2"
 
-"expo-asset@~8.6.1":
+"expo-asset@^8.6.2", "expo-asset@~8.6.1":
   "integrity" "sha512-XqlXjkuUCEiojbHwbHPjQs1oboRz6w3eV96+9NBD+wb3EUqgAAYY2Do+IWyVCAl8UIFbFi3xzMiqk0Xm9+H8uQ=="
   "resolved" "https://registry.npmjs.org/expo-asset/-/expo-asset-8.6.2.tgz"
   "version" "8.6.2"
@@ -3385,19 +3401,19 @@
   "resolved" "https://registry.npmjs.org/expo-error-recovery/-/expo-error-recovery-3.2.0.tgz"
   "version" "3.2.0"
 
+"expo-file-system@^15.1.1", "expo-file-system@~15.1.0":
+  "integrity" "sha512-MYYDKxjLo9VOkvGHqym5EOAUS+ero9O66X5zI+EXJzqNznKvnfScdXeeAaQzShmWtmLkdVDCoYFGOaTvTA1wTQ=="
+  "resolved" "https://registry.npmjs.org/expo-file-system/-/expo-file-system-15.1.1.tgz"
+  "version" "15.1.1"
+  dependencies:
+    "uuid" "^3.4.0"
+
 "expo-file-system@~14.1.0":
   "integrity" "sha512-lJcPGQ8yKXVknVkD5TmcJnR/TpQbEL0JP8hknLejfq3FIqPqI/LBFn31YiP37grxW8lITz1al8pq5T6CSUjAzQ=="
   "resolved" "https://registry.npmjs.org/expo-file-system/-/expo-file-system-14.1.0.tgz"
   "version" "14.1.0"
   dependencies:
     "@expo/config-plugins" "~5.0.0"
-    "uuid" "^3.4.0"
-
-"expo-file-system@~15.1.0":
-  "integrity" "sha512-MYYDKxjLo9VOkvGHqym5EOAUS+ero9O66X5zI+EXJzqNznKvnfScdXeeAaQzShmWtmLkdVDCoYFGOaTvTA1wTQ=="
-  "resolved" "https://registry.npmjs.org/expo-file-system/-/expo-file-system-15.1.1.tgz"
-  "version" "15.1.1"
-  dependencies:
     "uuid" "^3.4.0"
 
 "expo-font@~10.2.0", "expo-font@~10.2.1":
@@ -3435,6 +3451,13 @@
   dependencies:
     "compare-versions" "^3.4.0"
     "invariant" "^2.2.4"
+
+"expo-sqlite@^11.0.0":
+  "integrity" "sha512-cvFkBdHPuTamqobdxp3MdJ5X6HmYHgLAEg0xERNnn3Fgc3t2iQlWBqZW9Asx/I4mKX5H7Ld9wKr0Ib0TeyzX9w=="
+  "resolved" "https://registry.npmjs.org/expo-sqlite/-/expo-sqlite-11.0.0.tgz"
+  "version" "11.0.0"
+  dependencies:
+    "@expo/websql" "^1.0.1"
 
 "expo-status-bar@~1.4.0":
   "integrity" "sha512-ZWjO6D4ARGYfAd3SWDD3STNudHDhyBZDZjhhseqoEmsf7bS9ykny8KKOhlzJW24qIQNPhkgdvHhaw9fQwMJy3Q=="
@@ -3983,6 +4006,11 @@
   "integrity" "sha512-47xSUiQioGaB96nqtp5/q55m0aBQSQdyIloMOc/x+QVTDZLNmXE892IIDrJ0hM1A5vcNUDD5tDffkSP5lCaIIA=="
   "resolved" "https://registry.npmjs.org/image-size/-/image-size-0.6.3.tgz"
   "version" "0.6.3"
+
+"immediate@^3.2.2":
+  "integrity" "sha512-HR7EVodfFUdQCTIeySw+WDRFJlPcLOJbXfwwZ7Oom6tjsvZ3bOkCDJHehQC3nxJrv7+f9XecwazynjU8e4Vw3Q=="
+  "resolved" "https://registry.npmjs.org/immediate/-/immediate-3.3.0.tgz"
+  "version" "3.3.0"
 
 "import-fresh@^2.0.0":
   "integrity" "sha512-eZ5H8rcgYazHbKC3PG4ClHNykCSxtAhxSSEM+2mb+7evD2CKF5V7c0dNum7AdpDh0ZdICwZY9sRSn8f+KH96sg=="
@@ -5288,6 +5316,11 @@
   "resolved" "https://registry.npmjs.org/node-stream-zip/-/node-stream-zip-1.15.0.tgz"
   "version" "1.15.0"
 
+"noop-fn@^1.0.0":
+  "integrity" "sha512-pQ8vODlgXt2e7A3mIbFDlizkr46r75V+BJxVAyat8Jl7YmI513gG5cfyRL0FedKraoZ+VAouI1h4/IWpus5pcQ=="
+  "resolved" "https://registry.npmjs.org/noop-fn/-/noop-fn-1.0.0.tgz"
+  "version" "1.0.0"
+
 "normalize-path@^3.0.0":
   "integrity" "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA=="
   "resolved" "https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz"
@@ -5647,6 +5680,11 @@
   "resolved" "https://registry.npmjs.org/posix-character-classes/-/posix-character-classes-0.1.1.tgz"
   "version" "0.1.1"
 
+"pouchdb-collections@^1.0.1":
+  "integrity" "sha512-31db6JRg4+4D5Yzc2nqsRqsA2oOkZS8DpFav3jf/qVNBxusKa2ClkEIZ2bJNpaDbMfWtnuSq59p6Bn+CipPMdg=="
+  "resolved" "https://registry.npmjs.org/pouchdb-collections/-/pouchdb-collections-1.0.1.tgz"
+  "version" "1.0.1"
+
 "pretty-bytes@5.6.0":
   "integrity" "sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg=="
   "resolved" "https://registry.npmjs.org/pretty-bytes/-/pretty-bytes-5.6.0.tgz"
@@ -5907,6 +5945,11 @@
   "resolved" "https://registry.npmjs.org/react-native-size-matters/-/react-native-size-matters-0.4.0.tgz"
   "version" "0.4.0"
 
+"react-native-sqlite-storage@^6.0.1":
+  "integrity" "sha512-1tDFjrint6X6qSYKf3gDyz+XB+X79jfiL6xTugKHPRtF0WvqMtVgdLuNqZunIXjNEvNtNVEbXaeZ6MsguFu00A=="
+  "resolved" "https://registry.npmjs.org/react-native-sqlite-storage/-/react-native-sqlite-storage-6.0.1.tgz"
+  "version" "6.0.1"
+
 "react-native-svg@^12.1.1", "react-native-svg@12.3.0":
   "integrity" "sha512-ESG1g1j7/WLD7X3XRFTQHVv0r6DpbHNNcdusngAODIxG88wpTWUZkhcM3A2HJTb+BbXTFDamHv7FwtRKWQ/ALg=="
   "resolved" "https://registry.npmjs.org/react-native-svg/-/react-native-svg-12.3.0.tgz"
@@ -5923,7 +5966,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@>=0.50.0", "react-native@>=0.59.0", "react-native@0.69.6":
+"react-native@*", "react-native@>=0.14.0", "react-native@>=0.50.0", "react-native@>=0.59.0", "react-native@0.69.6":
   "integrity" "sha512-wwXpqM+12kdEYdBZCJUb5SBu95CzgejrwFeYJ78RzHZV/Sj6DBRekbsHGrDDsY4R25QXALQxy4DQYQCObVvWjA=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.69.6.tgz"
   "version" "0.69.6"
@@ -6803,6 +6846,11 @@
   dependencies:
     "readable-stream" "~2.3.6"
     "xtend" "~4.0.1"
+
+"tiny-queue@^0.2.1":
+  "integrity" "sha512-EijGsv7kzd9I9g0ByCl6h42BWNGUZrlCSejfrb3AKeHC33SGbASu1VDf5O3rRiiUOhAC9CHdZxFPbZu0HmR70A=="
+  "resolved" "https://registry.npmjs.org/tiny-queue/-/tiny-queue-0.2.1.tgz"
+  "version" "0.2.1"
 
 "tmp@^0.0.33":
   "integrity" "sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw=="

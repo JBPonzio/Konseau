@@ -26,13 +26,13 @@ export default function ({ navigation }) {
                             {getProgress()}
                         </View>
                         <View style={homeStyle.item}>
-                            <Text style={homeStyle.headItem} title='Détails conso'>Ce mois-ci</Text>
+                            <Text style={homeStyle.headItem} title='Détails conso'>Cette semaine</Text>
                             {getProgress()}
                         </View>
                     </LinearGradient>
                     <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
                         <View style={homeStyle.item}>
-                            <Text style={homeStyle.headItem} title='Détails conso'>Cette semaine</Text>
+                            <Text style={homeStyle.headItem} title='Détails conso'>Ce mois-ci</Text>
                             {getProgress()}
                         </View>
                         <View style={homeStyle.item}>
@@ -40,14 +40,14 @@ export default function ({ navigation }) {
                             {getProgress()}
                         </View>
                     </LinearGradient>
-                    <TouchableOpacity onPress={() => {goTo()}}>
-                        <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
-                            <View style={homeStyle.item}>
-                                <Text style={homeStyle.headItem} title='Détails conso'>Ma conso en détail</Text>
-                                {getbar()}
+                    <LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>
+                        <View style={homeStyle.item}>
+                            <Text style={homeStyle.headItem} title='Détails conso'>Objectifs</Text>
+                            <View>
+
                             </View>
-                        </LinearGradient>
-                    </TouchableOpacity>
+                        </View>
+                    </LinearGradient>
                 </View>
             </ScrollView>
         </View>

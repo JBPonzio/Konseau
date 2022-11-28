@@ -13,7 +13,7 @@ function getProgress() {
             duration={1000}
             progressValueColor={'#ecf0f1'}
             maxValue={200}
-            valueSuffix={'l'}
+            valueSuffix={' L'}
             title={'30%'}
             titleColor={'white'}
             titleStyle={{fontWeight: 'bold'}}
