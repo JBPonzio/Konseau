@@ -16,9 +16,11 @@ export default function ({ navigation }) {
             <StatusBar style="light" backgroundColor={'#101010'} />
             <View style={homeStyle.base}>
                 <View style={homeStyle.header}>
+                    {/* Affichage du logo de l'application */}
                     <Image style={homeStyle.imageHeader} source={require('../assets/konseau.png')} />
                 </View>
                 <View>
+                    {/* Affichage du texte de bienvenu sur l'application */}
                     <Text style={homeStyle.texteItem} title='GetStarted'>Bienvenu sur Konseau votre application de consommation d'eau.{"\n"} Cliquez sur 'Commencer' pour gérer votre Konseau</Text>
                 </View>
 
