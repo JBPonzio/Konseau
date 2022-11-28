@@ -9,8 +9,12 @@ const screenHeight = Dimensions.get('window').height;
 
 export default function ({ navigation }) {
 
-    const goTo = () => navigation.navigate("home");
+    const goTo = () => navigation.navigate("Tableau de bord");
+    let firstConnection = true;
 
+    if (!firstConnection) {
+        return goTo();
+    }
     return (
         <View style={{ flex: 1 }}>
             <StatusBar style="light" backgroundColor={'#101010'} />

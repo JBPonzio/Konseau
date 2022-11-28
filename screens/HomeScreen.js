@@ -44,7 +44,6 @@ export default function ({ navigation }) {
                         <View style={homeStyle.item}>
                             <Text style={homeStyle.headItem} title='Détails conso'>Objectifs</Text>
                             <View>
-
                             </View>
                         </View>
                     </LinearGradient>

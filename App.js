@@ -1,5 +1,6 @@
 // In App.js in a new project
 import * as React from 'react';
+import { NavigationContainer} from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from './screens/HomeScreen';
 import DetailScreen from "./screens/DetailScreen";
@@ -34,62 +35,54 @@ export default class App extends React.Component {
         // // })
         // // console.log(this.state)
         return (
-            <NavigationContainer >
-                <Stack.Navigator
-                    screenOptions={{
-                        headerStyle: {
-                            backgroundColor: '#101010',
-                            color: '#FFFFFF',
-                        }
-                    }}>
-                    <Stack.Screen name="getStarted" component={GetStartedScreen} options={{ tabBarLabel: 'Konstan' }}
-                    />
-                    <Stack.Screen name="home" component={HomeScreen} options={{ tabBarLabel: 'Konstan' }}
-                    />
-                    <Stack.Screen name="detail" component={DetailScreen} />
-                </Stack.Navigator>
+            <NavigationContainer>
                 <Tab.Navigator>
+                    <Tab.Screen name="welcome" component={GetStartedScreen} options={{
+                        tabBarStyle: { display: "none" },
+                        tabBarIconStyle: { display: "none" },
+                        headerShown: false,
+                    }}/>
                     <Tab.Screen name="Tableau de bord" component={HomeScreen} options={{
                         tabBarActiveBackgroundColor: '#08374b',
                         tabBarActiveTintColor: '#FFFFFF',
-                        headerShown:false,
+                        headerShown: false,
                         tabBarInactiveBackgroundColor: '#0a2133',
                         tabBarInactiveTintColor: '#FFFFFF',
                         tabBarIcon: () => (
-                            <MaterialIcons name="dashboard" color={'#FFFFFF'} size={20} />
+                            <MaterialIcons name="dashboard" color={'#FFFFFF'} size={20}/>
                         ),
                     }}/>
                     <Tab.Screen name="Répartition" component={DivisionScreen} options={{
                         tabBarActiveBackgroundColor: '#08374b',
                         tabBarActiveTintColor: '#FFFFFF',
-                        headerShown:false,
+                        headerShown: false,
                         tabBarInactiveBackgroundColor: '#0a2133',
                         tabBarInactiveTintColor: '#FFFFFF',
                         borderTopColor: '#0a2133',
                         tabBarIcon: () => (
-                            <MaterialCommunityIcons name="chart-donut" color={'#FFFFFF'} size={20} />
+                            <MaterialCommunityIcons name="chart-donut" color={'#FFFFFF'} size={20}/>
                         ),
                     }}/>
                     <Tab.Screen name="Détails" component={DetailScreen} options={{
                         tabBarActiveBackgroundColor: '#08374b',
                         tabBarActiveTintColor: '#FFFFFF',
-                        headerShown:false,
+                        headerShown: false,
                         tabBarInactiveBackgroundColor: '#0a2133',
                         tabBarInactiveTintColor: '#FFFFFF',
                         borderTopColor: '#0a2133',
                         tabBarIcon: () => (
-                            <AntDesign name="barschart" size={24} color='#FFFFFF' />
+                            <AntDesign name="barschart" size={24} color='#FFFFFF'/>
                         ),
                     }}/>
                     <Tab.Screen name="Profil" component={ProfilScreen} options={{
                         tabBarActiveBackgroundColor: '#08374b',
                         tabBarActiveTintColor: '#FFFFFF',
-                        headerShown:false,
+                        headerShown: false,
                         tabBarInactiveBackgroundColor: '#0a2133',
                         tabBarInactiveTintColor: '#FFFFFF',
                         borderTopColor: '#0a2133',
                         tabBarIcon: () => (
-                            <FontAwesome name="user" size={20} color='#FFFFFF'  />
+                            <FontAwesome name="user" size={20} color='#FFFFFF'/>
                         ),
                     }}/>
                 </Tab.Navigator>
