@@ -1,15 +1,17 @@
 // In App.js in a new project
 import * as React from 'react';
-import { NavigationContainer} from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from './screens/HomeScreen';
 import DetailScreen from "./screens/DetailScreen";
+import GetStartedScreen from './screens/GetStartedScreen';
 import DivisionScreen from "./screens/DivisionScreen";
 import ProfilScreen from "./screens/ProfilScreen";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import { MaterialIcons, MaterialCommunityIcons, FontAwesome, AntDesign } from '@expo/vector-icons';
+
+const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 import LocalDatabaseManager from "./data/db";
-
 
 export default class App extends React.Component {
     constructor(props) {
@@ -20,19 +22,32 @@ export default class App extends React.Component {
     }
 
     render() {
-        LocalDatabaseManager.initializeDatabase();
-        LocalDatabaseManager.insertConso();
-        let results = LocalDatabaseManager.getConso().then(r => console.log('Conso récupérée'));
-        console.log(results);
-        // const db = SQLite.openDatabase('database.db'); // returns Database object
-        // db.transaction((tx) => {
-        //     tx.executeSql('SELECT * FROM conso;', [], (tx, resultSet) => {
-        //         console.log('ok',resultSet.rows._array);
-        //         this.setState({data: resultSet.rows._array})})
-        // })
-        // console.log(this.state)
+        // LocalDatabaseManager.initializeDatabase();
+        // LocalDatabaseManager.insertConso();
+        // let results = LocalDatabaseManager.getConso().then(r => console.log('Conso récupérée'));
+        // console.log(results);
+        // // const db = SQLite.openDatabase('database.db'); // returns Database object
+        // // db.transaction((tx) => {
+        // //     tx.executeSql('SELECT * FROM conso;', [], (tx, resultSet) => {
+        // //         console.log('ok',resultSet.rows._array);
+        // //         this.setState({data: resultSet.rows._array})})
+        // // })
+        // // console.log(this.state)
         return (
             <NavigationContainer >
+                <Stack.Navigator
+                    screenOptions={{
+                        headerStyle: {
+                            backgroundColor: '#101010',
+                            color: '#FFFFFF',
+                        }
+                    }}>
+                    <Stack.Screen name="getStarted" component={GetStartedScreen} options={{ tabBarLabel: 'Konstan' }}
+                    />
+                    <Stack.Screen name="home" component={HomeScreen} options={{ tabBarLabel: 'Konstan' }}
+                    />
+                    <Stack.Screen name="detail" component={DetailScreen} />
+                </Stack.Navigator>
                 <Tab.Navigator>
                     <Tab.Screen name="Tableau de bord" component={HomeScreen} options={{
                         tabBarActiveBackgroundColor: '#08374b',
