@@ -7,7 +7,9 @@ import DetailScreen from "./screens/DetailScreen";
 import GetStartedScreen from './screens/GetStartedScreen';
 import DivisionScreen from "./screens/DivisionScreen";
 import ProfilScreen from "./screens/ProfilScreen";
+import FormScreen from "./screens/FormScreen";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import { BottomTabBar } from '@react-navigation/bottom-tabs'
 import { MaterialIcons, MaterialCommunityIcons, FontAwesome, AntDesign } from '@expo/vector-icons';
 
 const Stack = createNativeStackNavigator();
@@ -36,8 +38,22 @@ export default class App extends React.Component {
         // // console.log(this.state)
         return (
             <NavigationContainer>
-                <Tab.Navigator>
+                <Tab.Navigator
+                    screenOptions={({ route }) => ({
+                        tabBarButton: [
+                            "welcome",
+                            "form"
+                        ].includes(route.name)
+                            ? () => {
+                                return null;
+                            }
+                            : undefined,
+                    })}>
                     <Tab.Screen name="welcome" component={GetStartedScreen} options={{
+                        tabBarStyle: { display: "none" },
+                        headerShown: false,
+                    }}/>
+                    <Tab.Screen name="form" component={FormScreen} options={{
                         tabBarStyle: { display: "none" },
                         tabBarIconStyle: { display: "none" },
                         headerShown: false,
