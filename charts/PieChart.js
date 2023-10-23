@@ -32,17 +32,22 @@ export default function getPie() {
         ]
 
     return (
-        // <VictoryPie data={data} x={data.x} y={data.y}
-        //     labels={data.x}
-        //     theme={VictoryTheme.material} ></VictoryPie>
         <VictoryPie
+            standlone={false}
             padAngle={5}
-            innerRadius={100}
+            innerRadius={60}
             data={data}
-            padding={{ top: 20, bottom: 60 }}
+            x={data.x}
+            y={data.y}
+            labelRadius={({ data }) => data.x }
+            padding={{ top: 80, bottom: 80, right:80, left:80 }}
             style={{
                 data: {
-                    fill: ({datum}) => datum.color
+                    fill: ({datum}) => datum.color,
+                },
+                labels: {
+                    fontsize: 5,
+                    fill: "#FFFFFF"
                 }
             }}
         />

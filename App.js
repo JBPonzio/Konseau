@@ -29,7 +29,14 @@ export default class App extends React.Component {
         return (
             <NavigationContainer>
                 <Tab.Navigator
+
                     screenOptions={({route}) => ({
+                        style: {
+                            elevation: 0,   // for Android
+                            shadowOffset: {
+                                width: 0, height: 0 // for iOS
+                            },
+                        },
                         tabBarButton: [
                             "welcome",
                             "form"
@@ -38,7 +45,13 @@ export default class App extends React.Component {
                                 return null;
                             }
                             : undefined,
-                    })}>
+                    })}
+                    tabBarOptions={{
+                        style: {
+                            backgroundColor: '#0a2133',
+                        },
+                    }}
+                >
                     <Tab.Screen name="welcome" component={GetStartedScreen} options={{
                         tabBarStyle: {display: "none"},
                         headerShown: false,

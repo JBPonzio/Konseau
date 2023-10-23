@@ -24,8 +24,8 @@ export default function ({ navigation }) {
                         <View style={homeStyle.column}>
                             <Text style={homeStyle.headItem} title='Détails conso'>Aujourd'hui</Text>
                             <View style={homeStyle.items}>
-                                {getProgress()}
                                 <Image style={homeStyle.imgFeeling} source={require('../assets/happy_water.png')}/>
+                                {getProgress()}
                             </View>
                         </View>
                     </LinearGradient>
@@ -33,8 +33,8 @@ export default function ({ navigation }) {
                         <View style={homeStyle.column}>
                             <Text style={homeStyle.headItem} title='Détails conso'>Cette semaine</Text>
                             <View style={homeStyle.items}>
-                                {getProgress()}
                                 <Image style={homeStyle.imgFeeling} source={require('../assets/happy_water.png')}/>
+                                {getProgress()}
                             </View>
                         </View>
                     </LinearGradient>
@@ -42,8 +42,8 @@ export default function ({ navigation }) {
                         <View style={homeStyle.column}>
                             <Text style={homeStyle.headItem} title='Détails conso'>Ce mois</Text>
                             <View style={homeStyle.items}>
-                                {getProgress()}
                                 <Image style={homeStyle.imgFeeling} source={require('../assets/embarased_water.png')}/>
+                                {getProgress()}
                             </View>
                         </View>
                     </LinearGradient>
@@ -51,19 +51,11 @@ export default function ({ navigation }) {
                         <View style={homeStyle.column}>
                             <Text style={homeStyle.headItem} title='Détails conso'>Cette année</Text>
                             <View style={homeStyle.items}>
-                                {getProgress()}
                                 <Image style={homeStyle.imgFeeling} source={require('../assets/cry_water.png')}/>
+                                {getProgress()}
                             </View>
                         </View>
                     </LinearGradient>
-                    {/*<LinearGradient colors={['#09374c', '#0b0f1e']} start={{ x:0.5, y:0 }} end={{ x: 0, y: 0.5 }} style={homeStyle.body}>*/}
-                    {/*    <View style={homeStyle.item}>*/}
-                    {/*        <View style={homeStyle.objectifsHeader}>*/}
-                    {/*            <Text style={homeStyle.headItem} title='Détails conso'>Objectifs du mois</Text>*/}
-                    {/*            <Image style={homeStyle.imgFeeling} source={require('../assets/happy_water.png')}/>*/}
-                    {/*        </View>*/}
-                    {/*    </View>*/}
-                    {/*</LinearGradient>*/}
                 </View>
             </ScrollView>
         </View>
