@@ -5,10 +5,11 @@ function getUsages() {
 }
 
 function getProgress() {
+    let RandomNumber = Math.floor(Math.random() * 100) + 1 ;
 
     return (
         <CircularProgress
-            value={60}
+            value={RandomNumber}
             radius={50}
             duration={1000}
             progressValueColor={'#ecf0f1'}

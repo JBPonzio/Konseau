@@ -11,7 +11,7 @@ export default function ({ navigation }) {
 
     const goToHome = () => navigation.navigate("Tableau de bord");
     const goToForm = () => navigation.navigate("form");
-    let firstConnection = true;
+    let firstConnection = false;
 
     // si il ne s'agit pas de la première connexion renvoie sur la page du tableau de bord
     if (!firstConnection) {
