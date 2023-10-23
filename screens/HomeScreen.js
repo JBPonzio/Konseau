@@ -25,7 +25,7 @@ export default function ({ navigation }) {
                             <Text style={homeStyle.headItem} title='Détails conso'>Aujourd'hui</Text>
                             <View style={homeStyle.items}>
                                 <Image style={homeStyle.imgFeeling} source={require('../assets/happy_water.png')}/>
-                                {getProgress()}
+                                {getProgress('20', 2, 100)}
                             </View>
                         </View>
                     </LinearGradient>
@@ -34,7 +34,7 @@ export default function ({ navigation }) {
                             <Text style={homeStyle.headItem} title='Détails conso'>Cette semaine</Text>
                             <View style={homeStyle.items}>
                                 <Image style={homeStyle.imgFeeling} source={require('../assets/happy_water.png')}/>
-                                {getProgress()}
+                                {getProgress('60', 150, 250)}
                             </View>
                         </View>
                     </LinearGradient>
@@ -43,7 +43,7 @@ export default function ({ navigation }) {
                             <Text style={homeStyle.headItem} title='Détails conso'>Ce mois</Text>
                             <View style={homeStyle.items}>
                                 <Image style={homeStyle.imgFeeling} source={require('../assets/embarased_water.png')}/>
-                                {getProgress()}
+                                {getProgress('91', 40, 45)}
                             </View>
                         </View>
                     </LinearGradient>
@@ -52,7 +52,7 @@ export default function ({ navigation }) {
                             <Text style={homeStyle.headItem} title='Détails conso'>Cette année</Text>
                             <View style={homeStyle.items}>
                                 <Image style={homeStyle.imgFeeling} source={require('../assets/cry_water.png')}/>
-                                {getProgress()}
+                                {getProgress('101', 1500, 1500)}
                             </View>
                         </View>
                     </LinearGradient>

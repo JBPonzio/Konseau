@@ -4,8 +4,10 @@ function getUsages() {
 
 }
 
-function getProgress() {
-    let RandomNumber = Math.floor(Math.random() * 100) + 1 ;
+function getProgress(percent, RandomNumber, objectif) {
+    // let RandomNumber = Math.floor(Math.random() * 100) + 1 ;
+    const color =  percent > 100 ? "red" : (percent > 90 ? "orange" : "#2ecc71");
+    console.log(color, RandomNumber);
 
     return (
         <CircularProgress
@@ -13,11 +15,18 @@ function getProgress() {
             radius={50}
             duration={1000}
             progressValueColor={'#ecf0f1'}
-            maxValue={200}
+            maxValue={objectif}
             valueSuffix={' L'}
-            title={'30%'}
+            activeStrokeColor={color}
+            title={ percent + '%'}
             titleColor={'white'}
             titleStyle={{fontWeight: 'bold'}}
+            progressColor={color}
+            style={{
+                data: {
+                    color: color,
+                },
+            }}
         />
     )
 }
